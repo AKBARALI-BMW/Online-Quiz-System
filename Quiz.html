@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+    <link rel="stylesheet" href="Quiz.css">
+</head>
+<body>
+
+    
+    <div id="welcome-screen" class="container">
+        <h1>Welcome to the Web Development Quiz</h1>
+        <p>Please enter your details to start</p>
+        <input type="text" id="student-name" placeholder="Enter Your Name" required>
+        <input type="text" id="student-cnic" placeholder="Enter CNIC (11 Digits)" maxlength="11" required>
+        <input type="text" id="student-reg" placeholder="Enter Registration Number" required>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    
+    <div id="quiz-container" class="container hidden">
+        <h1>Web Development Quiz</h1>
+        <div class="timer">Time Left: <span id="time">10:00</span></div>
+        <div class="progress-bar"><div id="progress"></div></div>
+        <div id="question-box">
+            <h2 id="question-text"></h2>
+            <div id="answer-buttons" class="btn-group"></div>
+        </div>
+        <button id="next-btn" class="hidden">Next</button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-container" class="container hidden">
+        <h1 id="result-message"></h1>
+        <p id="student-info"></p>
+        <p id="score"></p>
+        <button onclick="location.reload()">Restart Quiz</button>
+    </div>
+
+    <script src="Quiz.js"></script>
+</body>
+</html>
